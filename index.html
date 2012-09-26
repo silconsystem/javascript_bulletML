@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+	<head>
+
+		<meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+
+		<title>jsdmkun</title>
+		<!--[if IE]><script type="text/javascript" src="/excanvas.compiled.js"></script><![endif]-->
+
+		<script type="text/javascript" src="js/const.js"></script>
+		<script type="text/javascript" src="js/log.js"></script>
+		<script type="text/javascript" src="js/downloader.js"></script>
+		<script type="text/javascript" src="js/image.js"></script>
+		<script type="text/javascript" src="js/fpstimer.js"></script>
+		<script type="text/javascript" src="js/bulletml.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		
+	</head>
+		
+<body onLoad="init();">
+
+		<h1>BulletML - Javascript Parser</h1>
+
+		<p>
+		Please use browsers which support canvas.
+		Chrome is recommended.
+		</p>
+		
+	<table>
+		<tr>
+			<td>
+				<canvas id="screen" width="300" height="400">
+				Your Microsoft Product doesnt let u use canvas, please get serious !?
+				</canvas>
+			</td>
+			<td>
+	
+				<span id="info">
+					<select id="tag">
+						<option value="ALL"></option>
+					</select>
+
+					<select id="bullets">
+						<option value="boss1"></option>
+					</select>
+				</span>
+				<span id="info2">
+				<br />
+				rank: <input id="rank" size="5" value="50">
+				<br />
+				blur: <input id="blur" size="5" value="100">
+				<br />
+				FPS (buggy): <input id="fps" size="5">
+				<br />
+				objs: <input id="objs" size="5">
+			</span>
+			</td>
+		</tr>
+	</table>
+	<br />
+
+	<input type="button" onclick="timer.stop();" value="stop">
+	<input id="dummy" type="checkbox">
+
+	<div id="err"></div>
+
+	<hr>
+	<address></address>
+	<!-- hhmts start -->
+	Last modified: Sat Jun 27 01:51:43 JST 2009
+	<!-- hhmts end -->
+	</body>
+</html>
