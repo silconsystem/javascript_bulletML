@@ -7,7 +7,7 @@ function newImage(src) {
 function getBallImage(name) {
     // TODO: support skin.
     log(name);
-    return newImage('bmp/default/' + name + '.gif');
+    return newImage('img/' + name + '.gif');
 }
 
 var IMAGES = {

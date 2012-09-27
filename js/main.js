@@ -331,7 +331,7 @@ function createMenu() {
 		var name = this[this.selectedIndex].value;
 		log(name);
 		var b = bulletByName[name];
-		if (b.src == 'sdmkun') {
+		if (b.src == 'jsdmkun') {
 			setTimeout("initGame('bullets/" + b.name + "');", 1);
 		}
 		else if (b.src == 'zipup') {
@@ -372,7 +372,7 @@ function showLogo() {
 function init() {
 	logoImage = new Image();
 	// TODO: support skins.
-	logoImage.src = 'bmp/default/logo.gif';
+	logoImage.src = 'img/logo.gif';
 	
 	createMenu();
 	
