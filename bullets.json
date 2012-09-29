@@ -21,6 +21,18 @@
 	src: "jsdmkun",
 	tag: "ALL",
 	name: "My_own_barrage02",
-	title: "my own barrage"
+	title: "semi barrage"
+},
+{
+	src: "jsdmkun",
+	tag: "ALL",
+	name: "My_own_barrage03",
+	title: "progearboss"
+},
+{
+	src: "jsdmkun",
+	tag: "ALL",
+	name: "My_own_barrage04",
+	title: "homingshots"
 }
 ]

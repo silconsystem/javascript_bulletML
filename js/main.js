@@ -334,10 +334,8 @@ function createMenu() {
 		if (b.src == 'jsdmkun') {
 			setTimeout("initGame('bullets/" + b.name + "');", 1);
 		}
-		else if (b.src == 'zipup') {
-			setTimeout("initGame('bullets/" + b.name + "');", 1);
-		}
-		else {
+		else
+		{
 			throw Error('Unknown bullet src: ' + b.src);
 		}
 		//document.getElementById('bullets').innerHTML = getTagOptions(tag);

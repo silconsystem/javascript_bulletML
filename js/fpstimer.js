@@ -1,6 +1,6 @@
 function FpsTimer(proc) {
     this.tick = 0;
-    this.fps_counter = new Array(24);
+    this.fps_counter = new Array(12);
     this.fps_counter[0] = new Date().getTime();
     this.fps_index = 0;
     this.proc = proc;
@@ -11,7 +11,7 @@ function FpsTimer(proc) {
 
     log('timer inited');
     this.startTime = new Date().getTime();
-    this.id = setTimeout(proc, 16);
+    this.id = setTimeout(proc, 12);
 }
 
 FpsTimer.prototype.wait = function() {
@@ -23,14 +23,14 @@ FpsTimer.prototype.wait = function() {
     var now = new Date().getTime();
     var prev = this.fps_counter[this.fps_index];
     var elapsed = now - prev;
-    var w = 16 - elapsed;
+    var w = 12 - elapsed;
 
-    this.fps_index = (this.fps_index + 1) % 24;
+    this.fps_index = (this.fps_index + 1) % 12;
     var next = this.fps_counter[this.fps_index];
     this.fps_counter[this.fps_index] = now;
     if (next) {
-        this.fps = 24 / (now - next) * 1000;
-        //this.fps = this.tick / ((now - this.startTime) / 1000);
+        this.fps = 12 / (now - next) * 1000;
+        this.fps = this.tick / ((now - this.startTime) / 1000);
         if (this.tick % 10 == 0) {
             this.fpsElem.value = (timer.fps+'').substr(0,5);
         }
