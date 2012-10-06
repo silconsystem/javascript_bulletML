@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<!DOCTYPE HTML>
 <html>
 	<head>
 
@@ -6,6 +6,22 @@
 
 		<title>jsdmkun</title>
 		<!--[if IE]><script type="text/javascript" src="/excanvas.compiled.js"></script><![endif]-->
+
+		<!-- StyleSheet -->
+		<link rel="StyleSheet" type="text/css" href="css/styles.css" />
+
+		<!-- jQuery libs & Plugins -->
+		<script type="text/javascript" src="lib/jquery-1.8.0.dev.js"></script>
+		<script type="text/javascript" src="js/tools/canvas_nebula.js"></script>
+		<script type="text/javascript">
+
+		        $(document).ready(function(){
+						
+			$('.hidden').hide();
+			
+		        });
+		
+		</script>
 
 		<script type="text/javascript" src="js/const.js"></script>
 		<script type="text/javascript" src="js/log.js"></script>
@@ -19,50 +35,64 @@
 		
 <body onLoad="init();">
 
+	<div id="header">
 		<h1>BulletML - Javascript Parser</h1>
+	</div><!-- header -->
 
-		<p>
-		Please use browsers which support canvas.
-		Chrome is recommended.
-		</p>
-		
-	<table>
-		<tr>
-			<td>
-				<canvas id="screen" width="350" height="500">
-				Your Microsoft Product doesnt let u use canvas, please get serious !?
-				</canvas>
-			</td>
-			<td>
+	<div id="game_wrap">
 	
-				<span id="info">
-					<select id="tag">
-						<option value="ALL"></option>
-					</select>
+	        <div id="game_screen">
 
-					<select id="bullets">
-						<option>...</option>
-					</select>
-				</span>
-				<span id="info2">
-				<br />
-				rank: <input id="rank" size="5" value="50">
-				<br />
-				blur: <input id="blur" size="5" value="100">
-				<br />
-				FPS (buggy): <input id="fps" size="5">
-				<br />
-				objs: <input id="objs" size="5">
-			</span>
-			</td>
-		</tr>
-	</table>
-	<br />
+		<canvas style="display:none" id="canvas" width="450" height="450"></canvas>
+		<canvas style="display:none" id="canvas3" width="450" height="450"></canvas>
+		<canvas id="canvas2" width="450" height="450"></canvas>
+				
+		<canvas id="screen" width="450" height="450">
+		Your Microsoft Product doesnt let u use canvas, please get serious !?
+		</canvas>
 
-	<input type="button" onclick="timer.stop();" value="stop">
-	<input id="dummy" type="checkbox">
+	        </div><!-- game_screen -->
 
-	<div id="err"></div>
+	        <div id="info_wrap">
+
+		<span id="info">
+		        <select id="tag">
+			<option value="ALL"></option>
+		        </select>
+
+		        <select id="bullets">
+			<option>...</option>
+		        </select>
+
+		</span>
+<br />
+		<span id="info2">
+		        <br />
+			rank: <input id="rank" size="5" value="50">
+		        <br />
+			blur: <input id="blur" size="5" value="100">
+		        <br />
+			FPS (buggy): <input id="fps" size="5">
+		        <br />
+			objs: <input id="objs" size="5">
+		</span>
+		
+	        </div><!-- info_wrap -->
+	</div><!-- game_wrap -->
+	
+	<div id="utils">	
+		<input type="button" onclick="timer.stop();" value="stop">
+		<input id="dummy" type="checkbox" onclick="$('.hidden').toggle();">
+	</div><!-- utils -->
+	
+	<div id="error_log" class="hidden">
+
+	        <center><p>Bullet Log</p><center>
+	
+	        <div id="err"></div>
+	        
+	</div><!-- error_log -->
+	
 	</body>
 	
 </html>

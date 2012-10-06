@@ -382,7 +382,7 @@ function init() {
 	 * -------------------------------------------------------------------------------------
 	 */
 	
-	//initLog();
+	initLog();
 		
 	player = new Player();
 	objs.push(player);

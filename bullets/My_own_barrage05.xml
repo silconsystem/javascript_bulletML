@@ -1,0 +1,121 @@
+<bulletml type="vertical" xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
+        
+        <action label="top">
+	<repeat>
+	        <times>20</times>
+	        <action>
+		<fire>
+		        <direction>-60+$rand*120</direction>
+		        <bulletRef label="hmgLsr"/>
+		</fire>
+		<repeat>
+		        
+		        <times>8</times>
+		        
+		        <action>
+			
+			<wait>1</wait>
+			
+			<fire>
+			        <direction type="sequence">0</direction>
+			        <bulletRef label="hmgLsr"/>
+			</fire>
+		        </action>
+		        
+		</repeat>
+		
+		<wait>10</wait>
+		
+	        </action>
+	</repeat>
+	
+	<wait>60</wait>
+	
+        </action>
+        
+        <bullet label="hmgLsr">
+	
+	<speed>2</speed>
+	
+	<action>
+	        <changeSpeed>
+		<speed>0.3</speed>
+		<term>30</term>
+	        </changeSpeed>
+	        
+	        <wait>100</wait>
+	        
+	        <changeSpeed>
+		<speed>5</speed>
+		<term>100</term>
+	        </changeSpeed>
+	</action>
+	<action>
+	        <repeat>
+		<times>12</times>
+		
+		<action>
+		        <changeDirection>
+			<direction type="aim">0</direction>
+			<term>45-$rank*30</term>
+		        </changeDirection>
+		        
+		        <wait>5</wait>
+		        
+		</action>
+	        </repeat>
+	</action>
+        </bullet>
+
+       <action>
+               
+       <repeat>
+               <times>5</times>
+               
+               <action>
+	       <fire>
+	               <direction type="absolute">360 * $rand</direction>
+	               <bulletRef label="add2way"/>
+	       </fire>
+	       
+	       <repeat>
+	               <times>71</times>
+	               
+	               <action>
+		       <fire>
+		               <direction type="sequence">5</direction>
+		               <bulletRef label="add2way"/>
+		       </fire>
+	               </action>
+	       </repeat>
+	       
+	       <wait>30 - 20 * $rank</wait>
+	       
+               </action>
+       </repeat>
+       
+       <wait>100</wait>
+       	</action>
+	
+	<bullet label="add2way">
+	        <speed>2.4 * (0.25 + 0.75 * $rank)</speed>
+	        
+	        <action>
+		
+		<wait>(24 + 6 * $rand)/ (2.4 * (0.25 + 0.75 * $rank))</wait>
+		
+		<fire>
+		        <direction type="relative">17</direction>
+		        <speed type="relative">0</speed>
+		        <bullet/>
+		</fire>
+		
+		<fire>
+		        <direction type="relative">-17</direction>
+		        <speed type="relative">0</speed>
+		        <bullet/>
+		</fire>
+		</action>
+	</bullet>
+        
+</bulletml>

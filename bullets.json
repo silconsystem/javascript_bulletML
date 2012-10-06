@@ -34,5 +34,23 @@
 	tag: "ALL",
 	name: "My_own_barrage04",
 	title: "homingshots"
+},
+{
+	src: "jsdmkun",
+	tag: "ALL",
+	name: "My_own_barrage05",
+	title: "experiments"
+},
+{
+	src: "jsdmkun",
+	tag: "ALL",
+	name: "round5_boss",
+	title: "round 5 boss"
+},
+{
+	src: "jsdmkun",
+	tag: "ALL",
+	name: "round6_boss",
+	title: "round 6 boss"
 }
 ]

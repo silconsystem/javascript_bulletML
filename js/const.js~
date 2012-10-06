@@ -1,0 +1,3 @@
+var W = 450;
+var H = 460;
+var errormsg = document.getElementById('.hidden');

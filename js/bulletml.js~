@@ -35,14 +35,14 @@ function BulletMLRunnerImpl(state, runner) {
     this.prevDir = 0;
     this.prevSpd = 0;
 
-    this.dirChangeVal = 0;
-    this.dirChangeCnt = 0;
-    this.spdChangeVal = 0;
-    this.spdChangeCnt = 0;
-    this.accelXVal = 0;
-    this.accelXCnt = 0;
-    this.accelYVal = 0;
-    this.accelYCnt = 0;
+    this.dirChangeVal = Math.round(0);
+    this.dirChangeCnt = Math.round(0);
+    this.spdChangeVal = Math.round(0);
+    this.spdChangeCnt = Math.round(0);
+    this.accelXVal = Math.round(0);
+    this.accelXCnt = Math.round(0);
+    this.accelYVal = Math.round(0);
+    this.accelYCnt = Math.round(0);
 }
 
 BulletMLRunnerImpl.prototype.getNumberContent = function(n) {

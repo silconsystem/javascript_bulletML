@@ -1,6 +1,5 @@
-<?xml version="1.0" ?>
-<!DOCTYPE bulletml SYSTEM "http://www.asahi-net.or.jp/~cs8k-cyu/bulletml.dtd">
-<bulletml xmlns="http://asahi-net.or.jp/~cs8k-cyu/bulletml">
+<bulletml xmlns="http://asahi-net.or.jp/~cs8k-cyu/bulletml" type="vertical">
 
-
+       <!-- XML goes here -->
+	
 </bulletml>

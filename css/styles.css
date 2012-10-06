@@ -1,0 +1,149 @@
+/* =========================================================================================================
+ *
+ * 		Javascript BulletML Parser
+ *
+ * 	Built on Kenta Cho's BulletML, an XML parser to describe complex
+ * 	bullet barrages.
+ *
+ * 	This project is freely editable and redistributable, original author unknown
+ * 	original code:
+ * 	http://shinh.skr.jp/jsdmkun/jsdmkun.html
+ *
+ * 	Picked up in 2012 by R. van Ardenne for study purposes
+ * 	http://silconsystem.orgfree.complex
+ *
+ * 	git:
+ * 	http://github.com/silconsystem/javascript_bulletML.git
+ */
+/* -------------------------
+ * 		Reset HTML
+ * 			-------------------------- */
+* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+}
+/* -------------------------
+ * 		HTML Elements
+ * 			--------------------------- */
+
+select {
+        border: 1px solid #000;
+        border-radius: 2px;
+}
+
+/* -------------------------
+ * 		Div Styles
+ * 			--------------------------- */
+
+#header {
+        position: absolute;
+        left: 50%;
+        margin-left: -300px;
+        width: 600px;
+        font-family: Verdana, sans-serif;
+        font-size: 0.6em;
+        display: block;
+}
+#game_wrap {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        margin-left: -320px;
+        width: 640px;
+        display: block;
+}
+#info_wrap {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        margin-left: -15px;
+        padding: 10px;
+        width: 190px;
+        height: 300px;
+        border: 1px solid #000;
+        border-radius: 3px;
+}
+#utils {
+        position: absolute;
+        top: 300px;
+        left: 50%;
+        margin-left: -15px;
+        padding: 10px;
+        width: 600px;
+        font-family: Verdana, sans-serif;
+        font-size: 0.6em;
+        display: block;
+}
+#error_log {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        margin-left: 210px;
+        padding: 10px;
+        width: 250px;
+        height: 150px;
+        border: 1px solid #000;
+        border-radius: 3px;
+        display: block;
+}
+#error_log textarea {
+        background-color: #000;
+        color: #0f3;
+        border: 1px solid #000;
+        border-radius: 3px;
+}
+#screen {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        margin-left: -510px;
+        width: 450px;
+        height: 450px;
+        z-index: 400;
+}
+#canvas2 {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        margin-left: -510px;
+        width: 450px;
+        height: 450px;
+        z-index: 300;
+}
+#canvas3 {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        margin-left: -510px;
+        width: 450px;
+        height: 450px;
+        z-index: 200;
+}
+#canvas {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        margin-left: -510px;
+        width: 450px;
+        height: 450px;
+        z-index: 100;
+}
+span#info2 {
+        font-weight: bold;
+}
+span#info2 > input {
+        text-align: right;
+        float: right;
+        clear: both;
+}
+div#utils,input,button {
+        width: 40px;
+        height: 20px;
+        border: 1px solid #000;
+        border-radius: 2px;
+}
+
+/* -------------------------
+ * 		Classes
+ * 			--------------------------- */

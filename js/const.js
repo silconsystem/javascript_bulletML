@@ -1,2 +1,2 @@
-var W = 350;
-var H = 500;
+var W = 450;
+var H = 460;
