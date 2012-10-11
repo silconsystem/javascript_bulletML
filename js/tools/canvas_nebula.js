@@ -22,8 +22,8 @@ $(document).ready(function(){
 			// A puff.
 			var	Puff = function(p) {
 				var	opacity,
-					sy = (Math.random()*285)>>0,
-					sx = (Math.random()*285)>>0;
+					sy = (Math.random()*185)>>0,
+					sx = (Math.random()*185)>>0;
 
 				this.p = p;
 
@@ -65,7 +65,7 @@ $(document).ready(function(){
 					puffs[i].move(timeFac);
 				}
 				ctx2.drawImage( $canvas[0] ,0,0,450,450);
-				setTimeout(loop, 6 );
+				setTimeout(loop, 16 );
 			};
 			// Turns out Chrome is much faster doing bitmap work if the bitmap is in an existing canvas rather
 			// than an IMG, VIDEO etc. So draw the big nebula image into canvas3
