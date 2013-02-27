@@ -118,7 +118,7 @@ BulletMLRunnerImpl.prototype.setSpeed = function(n) {
 
 BulletMLRunnerImpl.prototype.getNextNode = function(n) {
     if (n.parentNode.tagName == 'bulletml' ||
-        n == this.state.nodes[this.actIndex]) {
+        n == this.state.nodes[this.actIndex-1]) {
         var top = this.refStack[this.refStack.length - 1];
         if (top) {
             n = top[0];
